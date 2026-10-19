@@ -54,6 +54,15 @@ sphinx:
     html_last_updated_fmt: "%Y-%m-%d"
     # Parse Markdown produced by code cells (e.g. Table 1.1) as MyST, so pipe tables and $math$ render.
     nb_render_markdown_format: myst
+    # PDF: chapter, section and table numbers are written by hand in the titles and captions
+    # ("1.7 Vapour pressure...", "Table 2.1."), so stop LaTeX from adding its own as well
+    # (which printed "1.7 1.7 Vapour pressure..." and "Table 1.1: Common quantities...").
+    latex_elements:
+      preamble: |
+        \setcounter{secnumdepth}{-1}
+        \makeatletter
+        \long\def\@makecaption#1#2{\vskip\abovecaptionskip{\centering #2\par}\vskip\belowcaptionskip}
+        \makeatother
     html_theme_options:
       footer_content_items: [extra-footer.html, last-updated.html]
       icon_links:
