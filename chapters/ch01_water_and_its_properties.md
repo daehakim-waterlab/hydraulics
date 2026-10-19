@@ -16,7 +16,7 @@ kernelspec:
 1. A fluid is a substance that **deforms continuously under any shear stress**, however small. A solid resists shear by deforming a finite amount; a fluid keeps flowing.
 2. Hydraulics treats water as a **continuum**: properties such as density and velocity are smooth functions of position, even though water is made of molecules.
 3. Every physically meaningful equation is **dimensionally homogeneous**. Checking dimensions is the fastest way to catch an error.
-4. Five properties control almost everything in this book: **density** (inertia and weight), **viscosity** (friction), **surface tension** (capillarity), **compressibility** (pressure waves) and **vapour pressure** (cavitation).
+4. Five properties control almost everything in this book: **density** (inertia and weight), **viscosity** (friction), **surface tension** (capillarity), **compressibility** (pressure waves) and **vapor pressure** (cavitation).
 5. All five depend on **temperature**. For most engineering problems water can be treated as incompressible, but never as frictionless when it flows over long distances.
 ```
 
@@ -24,7 +24,7 @@ kernelspec:
 
 The word *hydraulics* comes from the Greek *hydor* (water) and *aulos* (pipe). Today it means the application of fluid mechanics to water in engineering: water at rest in tanks and behind gates, water flowing in pipes and channels, waves on the surface, and the sediment that moving water carries. Hydraulics sits between pure fluid mechanics, which seeks general laws, and hydrology, which describes the movement of water through the landscape. Much of hydraulics is therefore a blend of **theory** (conservation of mass, energy and momentum) and **experiment** (friction factors, loss coefficients, sediment transport rates).
 
-Throughout this book we treat water as a **continuum**. A cubic millimetre of water contains about $3\times10^{19}$ molecules, so any volume we care about is large enough that molecular fluctuations average out. Density, pressure and velocity can then be defined at a point and differentiated, which is what allows us to write conservation laws as equations.
+Throughout this book we treat water as a **continuum**. A cubic millimeter of water contains about $3\times10^{19}$ molecules, so any volume we care about is large enough that molecular fluctuations average out. Density, pressure and velocity can then be defined at a point and differentiated, which is what allows us to write conservation laws as equations.
 
 ## 1.2 Dimensions and units
 
@@ -42,7 +42,7 @@ $$
 
 Dimensional homogeneity is a necessary condition for a physical law. It is not sufficient, because a dimensionless constant can still be wrong, but an inhomogeneous equation is certainly wrong or, at best, an empirical formula that only works in one set of units. Several well-known hydraulic formulas (the Manning equation in Chapter 6 is the classic example) are of this empirical kind, and their coefficients change when the units change.
 
-This book uses **SI units** throughout: kilogram (kg), metre (m), second (s), newton (N = kg m s⁻²) and pascal (Pa = N m⁻²). Older Korean and Japanese texts often use the kilogram-force (kgf), the weight of 1 kg under standard gravity:
+This book uses **SI units** throughout: kilogram (kg), meter (m), second (s), newton (N = kg m s⁻²) and pascal (Pa = N m⁻²). Older Korean and Japanese texts often use the kilogram-force (kgf), the weight of 1 kg under standard gravity:
 
 $$
 1\ \text{kgf} = 1\ \text{kg} \times 9.81\ \text{m s}^{-2} = 9.81\ \text{N}.
@@ -157,7 +157,7 @@ Viscosity is the property that turns flow into **energy loss**. It is the reason
 
 ## 1.5 Surface tension and capillarity
 
-Molecules at a free surface are pulled inward by their neighbours, so the surface behaves like a stretched membrane. **Surface tension** $\sigma$ is the force per unit length acting along the surface (about 0.073 N m⁻¹ for water at 20 °C). It is negligible in most hydraulic structures but dominant at small scales: in thin tubes, in soil pores and in small physical models (Chapter 9).
+Molecules at a free surface are pulled inward by their neighbors, so the surface behaves like a stretched membrane. **Surface tension** $\sigma$ is the force per unit length acting along the surface (about 0.073 N m⁻¹ for water at 20 °C). It is negligible in most hydraulic structures but dominant at small scales: in thin tubes, in soil pores and in small physical models (Chapter 9).
 
 **Capillary rise.** Water in a narrow vertical tube of diameter $d$ rises until the weight of the raised column balances the vertical component of surface tension around the wetted perimeter. With contact angle $\theta$ between the water surface and the wall:
 
@@ -202,11 +202,11 @@ $$
 
 For water, $K \approx 2.2\times10^{9}$ Pa. Reducing the volume of water by just 1% requires about 22 MPa, the pressure at a depth of 2.2 km in the ocean. For this reason we treat water as **incompressible** in almost every problem in this book. The exception is sudden valve closure in a pipeline (water hammer), where compressibility controls the speed of the pressure wave, $c = \sqrt{K/\rho} \approx 1480$ m s⁻¹.
 
-## 1.7 Vapour pressure and cavitation
+## 1.7 Vapor pressure and cavitation
 
-Molecules continually escape from a liquid surface. The pressure exerted by the vapour in equilibrium with the liquid is the **vapour pressure** $p_v$, which rises steeply with temperature: about 2.3 kPa at 20 °C and 101.3 kPa (1 atm) at 100 °C, which is why water boils at 100 °C at sea level.
+Molecules continually escape from a liquid surface. The pressure exerted by the vapor in equilibrium with the liquid is the **vapor pressure** $p_v$, which rises steeply with temperature: about 2.3 kPa at 20 °C and 101.3 kPa (1 atm) at 100 °C, which is why water boils at 100 °C at sea level.
 
-If the **absolute** pressure inside flowing water drops to $p_v$, the water boils locally even at room temperature. Vapour bubbles form in the low-pressure zone and collapse violently when they reach higher pressure downstream. This is **cavitation**, which erodes pump impellers, spillways and valves. It also sets a hard limit on how high a siphon can lift water (Chapter 5): the pressure at the crest cannot fall below $p_v$.
+If the **absolute** pressure inside flowing water drops to $p_v$, the water boils locally even at room temperature. Vapor bubbles form in the low-pressure zone and collapse violently when they reach higher pressure downstream. This is **cavitation**, which erodes pump impellers, spillways and valves. It also sets a hard limit on how high a siphon can lift water (Chapter 5): the pressure at the crest cannot fall below $p_v$.
 
 ```{code-cell} python
 :tags: [hide-input]
@@ -221,11 +221,11 @@ nu_T = mu_T / rho_T
 # Surface tension: IAPWS (1994)
 tau = 1 - TK / 647.096
 sigma_T = 0.2358 * tau ** 1.256 * (1 - 0.625 * tau)
-# Saturation vapour pressure: Tetens/Magnus form
+# Saturation vapor pressure: Tetens/Magnus form
 pv_T = 0.6108 * np.exp(17.27 * T / (T + 237.3))   # kPa
 
 panels = [(rho_T, "Density ρ (kg m⁻³)"), (nu_T * 1e6, "Kinematic viscosity ν (10⁻⁶ m² s⁻¹)"),
-          (sigma_T * 1e3, "Surface tension σ (10⁻³ N m⁻¹)"), (pv_T, "Vapour pressure $p_v$ (kPa)")]
+          (sigma_T * 1e3, "Surface tension σ (10⁻³ N m⁻¹)"), (pv_T, "Vapor pressure $p_v$ (kPa)")]
 fig, axes = plt.subplots(2, 2, figsize=(8, 5.6), sharex=True)
 for ax, (y, lab) in zip(axes.flat, panels):
     ax.plot(T, y, color=c1, lw=2)
@@ -236,7 +236,7 @@ for ax in axes[1]: ax.set_xlabel("Temperature (°C)", color=ink2)
 plt.tight_layout(); plt.show()
 ```
 
-*Figure 1.3. Properties of pure water between 0 and 40 °C, computed from standard empirical formulas (density: Tanaka et al., 2001; viscosity: Vogel equation; surface tension: IAPWS; vapour pressure: Tetens formula). Note the density maximum near 4 °C and the steep drop in viscosity with temperature.*
+*Figure 1.3. Properties of pure water between 0 and 40 °C, computed from standard empirical formulas (density: Tanaka et al., 2001; viscosity: Vogel equation; surface tension: IAPWS; vapor pressure: Tetens formula). Note the density maximum near 4 °C and the steep drop in viscosity with temperature.*
 
 ```{code-cell} python
 :tags: [remove-input]
@@ -297,7 +297,7 @@ About 10 m in theory. In practice friction, velocity head and dissolved air redu
 - **Mixing kgf and N.** 1 kgf = 9.81 N, not 1 N. Convert old data to SI before calculating.
 - **Confusing $\mu$ and $\nu$.** Dynamic viscosity (Pa s) appears in shear stress; kinematic viscosity (m² s⁻¹) appears in the Reynolds number. They differ by a factor of $\rho \approx 1000$.
 - **Using radius instead of diameter** in the capillary-rise formula. With radius $r$ the formula is $h = 2\sigma\cos\theta/(\rho g r)$.
-- **Comparing gauge pressure with vapour pressure.** Cavitation depends on **absolute** pressure.
+- **Comparing gauge pressure with vapor pressure.** Cavitation depends on **absolute** pressure.
 - **Assuming water properties are constant.** Viscosity at 5 °C is 50% higher than at 20 °C, which changes friction losses noticeably.
 
 ## 1.10 Exercises
@@ -306,7 +306,7 @@ About 10 m in theory. In practice friction, velocity head and dissolved air redu
 2. Express dynamic viscosity in the $[F L T]$ system and in the $[M L T]$ system, and show that they are consistent.
 3. A 2 mm gap between a rotating shaft and its bearing is filled with water at 10 °C. The shaft surface moves at 3 m s⁻¹ and the wetted area is 0.02 m². Find the friction force and the power lost.
 4. A glass tube is used to read the water level in a tank. How small can its diameter be if the capillary error must stay below 2 mm?
-5. A pipeline carries water at 30 °C. At what absolute pressure would cavitation begin? Convert your answer to metres of water.
+5. A pipeline carries water at 30 °C. At what absolute pressure would cavitation begin? Convert your answer to meters of water.
 
 ---
 

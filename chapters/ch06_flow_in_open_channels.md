@@ -16,7 +16,7 @@ kernelspec:
 1. An open channel has a **free surface** at atmospheric pressure. Gravity drives the flow, and the depth is not fixed by the walls: it is part of the solution.
 2. In **uniform flow** the weight component along the slope balances bed friction. The **Manning equation** describes this balance, but it is empirical and works only in the units it was written for.
 3. For a given discharge, the **specific energy** has a minimum at the **critical depth**. The **Froude number** $Fr = V/\sqrt{gD}$ divides flow into **subcritical** ($Fr < 1$) and **supercritical** ($Fr > 1$).
-4. A **hydraulic jump** turns supercritical flow into subcritical flow and destroys energy. Because energy is lost, the jump is analysed with **momentum**, not energy.
+4. A **hydraulic jump** turns supercritical flow into subcritical flow and destroys energy. Because energy is lost, the jump is analyzed with **momentum**, not energy.
 5. In **gradually varied flow** the depth changes slowly along the channel according to $dy/dx = (S_0 - S_f)/(1 - Fr^2)$. Profiles start at a **control** and are computed step by step.
 ```
 
@@ -86,7 +86,7 @@ plt.tight_layout(); plt.show()
 Open channel flow is classified in three ways.
 
 - **Steady or unsteady.** In steady flow the depth and velocity at a point do not change with time. A flood wave is unsteady; the flow in a canal fed at a constant rate is steady.
-- **Uniform or varied.** In uniform flow the depth and velocity are the same at every section. In varied flow they change along the channel, either **gradually** (over hundreds of metres, as upstream of a weir) or **rapidly** (over a few depths, as in a hydraulic jump).
+- **Uniform or varied.** In uniform flow the depth and velocity are the same at every section. In varied flow they change along the channel, either **gradually** (over hundreds of meters, as upstream of a weir) or **rapidly** (over a few depths, as in a hydraulic jump).
 - **Subcritical or supercritical.** This depends on the Froude number, defined in §6.4.
 
 The Reynolds number $Re = VR/\nu$ (Chapter 4) is almost always above $10^4$ in engineering channels, so the flow is **fully turbulent**.
@@ -124,7 +124,7 @@ V = \frac{1.49}{n} R^{2/3} S_0^{1/2}
 \quad (V \text{ in ft s}^{-1},\ R \text{ in ft}),
 $$
 
-where $1.49 \approx 3.281^{1/3}$ is the cube root of the number of feet in a metre. Never use an $n$ value in a formula written for different units without checking which form it belongs to.
+where $1.49 \approx 3.281^{1/3}$ is the cube root of the number of feet in a meter. Never use an $n$ value in a formula written for different units without checking which form it belongs to.
 
 Despite this weakness, the Manning equation is simple and well tested, and $n$ has been tabulated for almost every kind of surface. Table 6.1 gives typical values.
 
@@ -251,7 +251,7 @@ $$
 
 is the **Froude number** and $D = A/B$ is the hydraulic depth. The minimum of $E$ ($dE/dy = 0$) occurs at $Fr = 1$, so **critical flow** is flow at $Fr = 1$. In a rectangle $D = y$, and the condition $Fr = 1$ gives back $y_c = (q^2/g)^{1/3}$. For other shapes we solve $Q^2 B/(g A^3) = 1$ numerically.
 
-The quantity $\sqrt{gD}$ is the speed of a small surface wave in still water of depth $D$ (Chapter 7). The Froude number therefore compares the flow speed with the wave speed. In subcritical flow ($Fr < 1$) a disturbance can travel upstream, so the flow is **controlled from downstream**. In supercritical flow ($Fr > 1$) every disturbance is swept downstream, so the flow is **controlled from upstream**. This single fact explains much of the behaviour in the rest of this chapter.
+The quantity $\sqrt{gD}$ is the speed of a small surface wave in still water of depth $D$ (Chapter 7). The Froude number therefore compares the flow speed with the wave speed. In subcritical flow ($Fr < 1$) a disturbance can travel upstream, so the flow is **controlled from downstream**. In supercritical flow ($Fr > 1$) every disturbance is swept downstream, so the flow is **controlled from upstream**. This single fact explains much of the behavior in the rest of this chapter.
 
 A channel slope is called **mild** if the normal depth is subcritical ($y_n > y_c$) and **steep** if it is supercritical ($y_n < y_c$). The same channel can be mild for a small discharge and steep for a large one.
 
@@ -587,7 +587,7 @@ The weir raises the water level by 0.30 m or more for about 4.1 km upstream. A d
 
 - **Using Manning's $n$ in the wrong units.** The SI form has 1 in the numerator; the US form has 1.49. The value of $n$ is the same, but only if the formula matches the units.
 - **Confusing $R$ and $D$.** The hydraulic radius $R = A/P$ goes into friction formulas; the hydraulic depth $D = A/B$ goes into the Froude number. They are equal only in a very wide rectangle.
-- **Using the energy equation across a hydraulic jump.** The head loss is unknown, so the sequent depth must come from momentum. Energy is used afterwards to find the loss.
+- **Using the energy equation across a hydraulic jump.** The head loss is unknown, so the sequent depth must come from momentum. Energy is used afterward to find the loss.
 - **Choosing the wrong alternative depth.** For a given $E$ there are two depths. Decide first whether the flow is subcritical or supercritical, and search on the correct side of $y_c$.
 - **Computing a profile in the wrong direction.** Subcritical profiles are computed upstream from a downstream control; supercritical profiles downstream from an upstream control.
 - **Forgetting that a hump can lower the water surface.** In subcritical flow the depth over a hump falls by more than the bed rises.

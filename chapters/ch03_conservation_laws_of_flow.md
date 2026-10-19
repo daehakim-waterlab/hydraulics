@@ -34,7 +34,7 @@ There are two ways to describe a moving fluid. In the **Lagrangian** view we fol
 
 Turbulent flow is never strictly steady, because the velocity at a point fluctuates rapidly. We call it steady when the **time-averaged** velocity is constant. The difference between laminar and turbulent flow is the subject of Chapter 4.
 
-**One-dimensional flow.** The velocity in a pipe is zero at the wall and highest near the centre. For most engineering purposes we replace this profile by a single **mean velocity**,
+**One-dimensional flow.** The velocity in a pipe is zero at the wall and highest near the center. For most engineering purposes we replace this profile by a single **mean velocity**,
 
 $$
 V = \frac{Q}{A} = \frac{1}{A}\int_A u \, dA ,
@@ -80,7 +80,7 @@ $$
 -\frac{dp}{ds} - \gamma \frac{dz}{ds} = \rho V \frac{dV}{ds}.
 $$
 
-This is **Euler's equation** along a streamline. It says that a particle speeds up when it moves towards lower pressure or downhill. For incompressible flow, dividing by $\gamma$ and integrating along the streamline gives
+This is **Euler's equation** along a streamline. It says that a particle speeds up when it moves toward lower pressure or downhill. For incompressible flow, dividing by $\gamma$ and integrating along the streamline gives
 
 $$
 \frac{p}{\gamma} + \frac{V^2}{2g} + z = H = \text{constant}.
@@ -114,8 +114,8 @@ A few rules make these lines easy to draw:
 - The EGL can only **fall** in the direction of flow, except at a pump. Its slope is the rate of friction loss.
 - At a reservoir surface, the EGL and HGL both lie at the water surface ($p = 0$, $V \approx 0$).
 - Where the pipe diameter falls, $V^2/2g$ rises and the HGL drops further below the EGL.
-- At a free outlet to the atmosphere, the HGL passes through the centre of the jet, since $p = 0$ there.
-- Where the HGL falls **below the pipe**, the pressure is below atmospheric. If the absolute pressure there approaches the vapour pressure, cavitation occurs.
+- At a free outlet to the atmosphere, the HGL passes through the center of the jet, since $p = 0$ there.
+- Where the HGL falls **below the pipe**, the pressure is below atmospheric. If the absolute pressure there approaches the vapor pressure, cavitation occurs.
 
 Figure 3.1 shows a reservoir feeding a horizontal pipe that contracts once and ends in a nozzle. Friction losses have been estimated with the methods of Chapter 5 (Darcy friction factor $f = 0.02$, entrance loss $0.5\,V^2/2g$, contraction loss $0.25\,V^2/2g$).
 
@@ -205,7 +205,7 @@ $$
 Q = C_d \, A_2 \sqrt{\frac{2g\, \Delta h}{1 - (A_2/A_1)^2}} .
 $$
 
-The **discharge coefficient** $C_d$ corrects for the small friction loss between the sections; for a well-made Venturi meter it is about 0.97–0.99. The head difference $\Delta h$ is the difference in piezometric head, which is exactly what a differential manometer measures: $\Delta h = R(S_m - 1)$ (Chapter 2). So the meter reading does not depend on whether the pipe is horizontal or inclined. The diverging section recovers most of the pressure, so the overall loss across a Venturi meter is small. The throat pressure must stay well above the vapour pressure to avoid cavitation.
+The **discharge coefficient** $C_d$ corrects for the small friction loss between the sections; for a well-made Venturi meter it is about 0.97–0.99. The head difference $\Delta h$ is the difference in piezometric head, which is exactly what a differential manometer measures: $\Delta h = R(S_m - 1)$ (Chapter 2). So the meter reading does not depend on whether the pipe is horizontal or inclined. The diverging section recovers most of the pressure, so the overall loss across a Venturi meter is small. The throat pressure must stay well above the vapor pressure to avoid cavitation.
 
 Because $\Delta h \propto Q^2$, a Venturi meter is sensitive at high flows but reads poorly at low flows: halving the discharge divides the reading by four (Figure 3.2, Table 3.1).
 
@@ -410,7 +410,7 @@ print(f"1 m -> 0 m: {t10:.0f} s = {t10/60:.1f} min")
 print(f"Total time to empty: {(t31 + t10)/60:.1f} min")
 ```
 
-The first 2 m drain in 14.4 min, but the last metre takes 19.7 min, because the outflow falls with the square root of the head.
+The first 2 m drain in 14.4 min, but the last meter takes 19.7 min, because the outflow falls with the square root of the head.
 
 **Example 3.3 — Venturi meter.** A Venturi meter with a 150 mm throat is fitted in a 300 mm water main. A mercury manometer ($S_m = 13.6$) between the inlet and the throat reads $R$ = 0.25 m. Take $C_d = 0.98$. Find the discharge.
 
@@ -441,7 +441,7 @@ print(f"Force of water on nozzle = {-Rx:.0f} N downstream")
 
 The water pushes the nozzle downstream with about 850 N, roughly the weight of an 86 kg person. The coupling must hold this force in tension, and the firefighter must resist the jet's reaction of $\rho Q V_2 \approx 203$ N.
 
-**Example 3.5 — Reducing bend.** A horizontal 45° bend reduces a pipe from 400 mm to 300 mm diameter. It carries 0.30 m³ s⁻¹ of water and the gauge pressure at the inlet is 150 kPa. Ignoring losses, find the components and resultant of the force of the water on the bend. The flow enters along $+x$ and leaves at 45° towards $+y$.
+**Example 3.5 — Reducing bend.** A horizontal 45° bend reduces a pipe from 400 mm to 300 mm diameter. It carries 0.30 m³ s⁻¹ of water and the gauge pressure at the inlet is 150 kPa. Ignoring losses, find the components and resultant of the force of the water on the bend. The flow enters along $+x$ and leaves at 45° toward $+y$.
 
 ```{code-cell} python
 D1, D2, Q, p1, th = 0.40, 0.30, 0.30, 150e3, np.radians(45)
@@ -457,7 +457,7 @@ print(f"Force on bend: Fx = {Fx/1e3:.2f} kN, Fy = {Fy/1e3:.2f} kN")
 print(f"Resultant = {np.hypot(Fx, Fy)/1e3:.2f} kN at {np.degrees(np.arctan2(Fy, Fx)):.1f}° from +x")
 ```
 
-The bend is pushed forward (along $+x$) and away from the direction of turning (towards $-y$), with a resultant of about 14.0 kN. As in Figure 3.4, almost all of it comes from the pressure terms, so the thrust block must be designed for the highest pressure the main can see, including test pressure.
+The bend is pushed forward (along $+x$) and away from the direction of turning (toward $-y$), with a resultant of about 14.0 kN. As in Figure 3.4, almost all of it comes from the pressure terms, so the thrust block must be designed for the highest pressure the main can see, including test pressure.
 
 ## 3.9 Common mistakes
 

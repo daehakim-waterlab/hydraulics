@@ -17,7 +17,7 @@ kernelspec:
 2. In turbulent flow $f$ depends on the **Reynolds number** and the **relative roughness** $k_s/D$. The **Colebrook–White equation** and the **Moody diagram** give it; the **Swamee–Jain** formula gives it explicitly.
 3. Fittings, bends and valves cause **minor losses** $K\,V^2/2g$. In short pipes they can be larger than the friction loss.
 4. Pipe systems are solved with two rules: **continuity at every junction** and **one head at every node**. In series the losses add; in parallel the losses are equal; in a network the losses around each loop sum to zero (**Hardy Cross**).
-5. Low pressure limits **siphons** and pump **suction** lines: the absolute pressure must stay well above the vapour pressure.
+5. Low pressure limits **siphons** and pump **suction** lines: the absolute pressure must stay well above the vapor pressure.
 6. Stopping the flow suddenly causes **water hammer**, a pressure rise $\Delta p = \rho c \Delta V$ that can burst a pipe.
 ```
 
@@ -50,7 +50,7 @@ The **energy grade line** (EGL) is the line of total head $p/\gamma + V^2/2g + z
 
 ## 5.2 The friction factor
 
-For turbulent flow, Nikuradse (1933) measured $f$ in pipes roughened with uniform sand. Commercial pipes have irregular roughness, and their behaviour in the transitional regime is smoother than in Nikuradse's tests. Colebrook (1939), using his experiments with White, proposed a single equation that covers smooth, transitional and fully rough commercial pipes. This is the **Colebrook–White equation**:
+For turbulent flow, Nikuradse (1933) measured $f$ in pipes roughened with uniform sand. Commercial pipes have irregular roughness, and their behavior in the transitional regime is smoother than in Nikuradse's tests. Colebrook (1939), using his experiments with White, proposed a single equation that covers smooth, transitional and fully rough commercial pipes. This is the **Colebrook–White equation**:
 
 $$
 \frac{1}{\sqrt{f}} = -2\log_{10}\!\left(\frac{k_s}{3.7D} + \frac{2.51}{Re\sqrt{f}}\right).
@@ -70,7 +70,7 @@ $$
 f = \frac{0.25}{\left[\log_{10}\!\left(\dfrac{k_s}{3.7D} + \dfrac{5.74}{Re^{0.9}}\right)\right]^2} .
 $$
 
-**The Moody diagram.** Moody (1944) plotted the Colebrook–White equation as a chart of $f$ against $Re$ for many values of $k_s/D$. Figure 5.1 is generated in the same way. Read it from right to left: at high $Re$ every curve becomes **horizontal** (fully rough flow, $f$ depends only on $k_s/D$); at lower $Re$ the curves bend up towards the smooth-pipe line (transitional flow); on the far left is the laminar line $f = 64/Re$.
+**The Moody diagram.** Moody (1944) plotted the Colebrook–White equation as a chart of $f$ against $Re$ for many values of $k_s/D$. Figure 5.1 is generated in the same way. Read it from right to left: at high $Re$ every curve becomes **horizontal** (fully rough flow, $f$ depends only on $k_s/D$); at lower $Re$ the curves bend up toward the smooth-pipe line (transitional flow); on the far left is the laminar line $f = 64/Re$.
 
 ```{code-cell} python
 :tags: [hide-input]
@@ -134,7 +134,7 @@ tidy(ax); fig.subplots_adjust(left=0.13, right=0.84, bottom=0.13, top=0.97); plt
 | PVC, polyethylene | 0.0015–0.007 |
 | Commercial or welded steel | 0.045 |
 | Asphalted cast iron | 0.12 |
-| Galvanised iron | 0.15 |
+| Galvanized iron | 0.15 |
 | Cast iron | 0.26 |
 | Concrete | 0.3–3.0 |
 | Riveted steel | 0.9–9.0 |
@@ -195,7 +195,7 @@ based on the upstream velocity $V_1$. When a pipe discharges into a reservoir, $
 | Exit into a reservoir | 1.0 |
 | Sudden contraction (small pipe velocity) | up to 0.5 |
 | 90° bend, smooth (radius ≈ $2D$) | 0.2–0.3 |
-| 90° elbow, standard or mitred | 0.9–1.1 |
+| 90° elbow, standard or mitered | 0.9–1.1 |
 | Gate valve, fully open | 0.15–0.2 |
 | Globe valve, fully open | about 10 |
 | Swing check valve | about 2 |
@@ -224,7 +224,7 @@ $$
 Q_i = \operatorname{sign}(z_i - H_J)\sqrt{\frac{|z_i - H_J|}{r_i}},
 $$
 
-counted positive towards the junction. Continuity requires $\sum Q_i = 0$. If the sum is positive, $H_J$ is too low; if negative, too high. A bisection on $H_J$ between the lowest and highest reservoir levels always finds the answer. The highest reservoir always supplies water and the lowest always receives it; the middle one may do either, depending on $H_J$.
+counted positive toward the junction. Continuity requires $\sum Q_i = 0$. If the sum is positive, $H_J$ is too low; if negative, too high. A bisection on $H_J$ between the lowest and highest reservoir levels always finds the answer. The highest reservoir always supplies water and the lowest always receives it; the middle one may do either, depending on $H_J$.
 
 ## 5.8 Pipe networks and the Hardy Cross method
 
@@ -318,7 +318,7 @@ Hardy Cross is easy to follow by hand, which is why it is still taught. Modern n
 
 ## 5.9 Siphons
 
-A **siphon** is a pipe that rises above the upstream water level before falling to a lower outlet. It flows full because the outlet is below the inlet, but at the crest the pipe lies above the HGL, so the pressure there is **below atmospheric**. Chapter 1 showed that the absolute pressure can never fall below the vapour pressure. We now include the flow.
+A **siphon** is a pipe that rises above the upstream water level before falling to a lower outlet. It flows full because the outlet is below the inlet, but at the crest the pipe lies above the HGL, so the pressure there is **below atmospheric**. Chapter 1 showed that the absolute pressure can never fall below the vapor pressure. We now include the flow.
 
 Take the upstream water surface as datum (point 1, $p = p_{atm}$, $V \approx 0$) and the crest C at height $z_C$ above it. Using **absolute** pressures, the energy equation gives
 
@@ -339,7 +339,7 @@ With no flow, the last two terms vanish and $z_{C,max} \approx 10.1$ m, the resu
 # Siphon of Example 5.4: datum = upstream water surface
 D_s, f_s, Ke, Kx, H_s = 0.20, 0.020, 0.5, 1.0, 6.0
 s_pipe = np.array([0.0, 40.0, 120.0])          # distance along the pipe (m)
-z_pipe = np.array([-3.0, 5.0, -9.0])           # pipe centreline (m)
+z_pipe = np.array([-3.0, 5.0, -9.0])           # pipe centerline (m)
 L_s = s_pipe[-1]
 hv = H_s / (Ke + f_s * L_s / D_s + Kx)         # velocity head V²/2g
 s = np.linspace(0, L_s, 300)
@@ -365,7 +365,7 @@ ax.set_xlim(-15, L_s + 15); ax.set_ylim(-10, 11)
 tidy(ax); plt.tight_layout(); plt.show()
 ```
 
-*Figure 5.3. Profile of the siphon of Example 5.4 (thick grey line). The pipe crest lies above the HGL, so its pressure head is negative (gauge), as marked. The dash-dot line lies $(p_{atm}-p_v)/\gamma$ above the HGL: any part of the pipe above it would have a pressure below the vapour pressure.*
+*Figure 5.3. Profile of the siphon of Example 5.4 (thick gray line). The pipe crest lies above the HGL, so its pressure head is negative (gauge), as marked. The dash-dot line lies $(p_{atm}-p_v)/\gamma$ above the HGL: any part of the pipe above it would have a pressure below the vapor pressure.*
 
 ## 5.10 Pumps in pipelines
 
@@ -428,7 +428,7 @@ tidy(ax); plt.tight_layout(); plt.show()
 
 *Figure 5.4. Pump curve ($H = 50 - 900Q^2$, a hypothetical pump) and system curves for the pipeline of Example 5.5 when new ($k_s$ = 0.26 mm) and after heavy corrosion ($k_s$ = 2 mm). Dots mark the operating points ($Q$ in m³ s⁻¹); the aged pipe delivers less water.*
 
-**Cavitation and NPSH.** The lowest pressure in a pumping system is at the pump inlet, on the suction side of the impeller. If it falls to the vapour pressure, the water boils and the collapsing bubbles damage the impeller (cavitation, Chapter 1). The **net positive suction head available** is the absolute head at the pump inlet above the vapour pressure head:
+**Cavitation and NPSH.** The lowest pressure in a pumping system is at the pump inlet, on the suction side of the impeller. If it falls to the vapor pressure, the water boils and the collapsing bubbles damage the impeller (cavitation, Chapter 1). The **net positive suction head available** is the absolute head at the pump inlet above the vapor pressure head:
 
 $$
 \text{NPSH}_A = \frac{p_{atm} - p_v}{\gamma} - z_s - h_{L,s} ,
@@ -469,7 +469,7 @@ Markdown("| Pipe | E (GPa) | D/e | c (m s⁻¹) | Δh for ΔV = 1 m s⁻¹ (m) |
 
 *Table 5.4. Pressure-wave speed and Joukowsky head rise for water in pipes of typical materials and wall thickness ($K$ = 2.2 GPa). Values of $E$ for plastics are short-term values and vary with temperature.*
 
-The wave reflects at the reservoir and returns to the valve after a time $2L/c$. If the valve closes in less than this time (**rapid closure**), the full Joukowsky rise occurs. Slower closure lets the reflected waves cancel part of the rise. Water hammer is controlled by closing valves slowly, by surge tanks and air vessels, and by pressure-relief valves. Pump trips cause the opposite problem: a pressure **drop** that can reach the vapour pressure and separate the water column.
+The wave reflects at the reservoir and returns to the valve after a time $2L/c$. If the valve closes in less than this time (**rapid closure**), the full Joukowsky rise occurs. Slower closure lets the reflected waves cancel part of the rise. Water hammer is controlled by closing valves slowly, by surge tanks and air vessels, and by pressure-relief valves. Pump trips cause the opposite problem: a pressure **drop** that can reach the vapor pressure and separate the water column.
 
 ## 5.12 Worked examples
 
@@ -546,7 +546,7 @@ print(f"Absolute crest pressure = {pC_abs*gamma/1e3:.1f} kPa")
 print(f"Highest possible crest: {z_max:.2f} m above upstream level")
 ```
 
-At a crest height of 5 m the absolute pressure is about 28 kPa, safely above the vapour pressure. The crest could not be higher than about 7.7 m, well below the static limit of 10.1 m, because the velocity head and the losses upstream of the crest use up 2.4 m of the available head. This matches the practical limit of 7–8 m quoted in Chapter 1.
+At a crest height of 5 m the absolute pressure is about 28 kPa, safely above the vapor pressure. The crest could not be higher than about 7.7 m, well below the static limit of 10.1 m, because the velocity head and the losses upstream of the crest use up 2.4 m of the available head. This matches the practical limit of 7–8 m quoted in Chapter 1.
 
 **Example 5.5 — Pump operating point and NPSH.** The pump of Figure 5.4 ($H = 50 - 900Q^2$) lifts water through a static lift of 20 m along a new cast-iron pipe ($k_s$ = 0.26 mm, $D$ = 0.30 m, $L$ = 1500 m, $\sum K$ = 6). Find the operating point and the power drawn if the efficiency there is 78%. The pump inlet is 3.0 m above the sump water level and the suction-pipe loss is 0.5 m. Is the NPSH available enough if the pump needs 5.0 m?
 
@@ -573,12 +573,12 @@ The pump delivers about 124 L s⁻¹ against 36 m of head and draws about 56 kW.
 
 ## 5.14 Exercises
 
-1. Water at 20 °C flows at 0.03 m³ s⁻¹ through 500 m of 0.15 m galvanised-iron pipe. Find the head loss using Colebrook–White and the Moody diagram (Figure 5.1), and the error made by Swamee–Jain.
+1. Water at 20 °C flows at 0.03 m³ s⁻¹ through 500 m of 0.15 m galvanized-iron pipe. Find the head loss using Colebrook–White and the Moody diagram (Figure 5.1), and the error made by Swamee–Jain.
 2. Two reservoirs with a level difference of 15 m are joined by 2 km of 0.40 m concrete pipe ($k_s$ = 1.0 mm), with a sharp-edged entrance, two smooth bends and an exit. Find the discharge, and the percentage of the head lost in minor losses.
 3. A 0.30 m pipe 1000 m long is to be replaced by two parallel pipes of equal diameter with the same total discharge and head loss. Using a constant $f = 0.02$, find the diameter of the new pipes.
 4. Repeat the Hardy Cross example of Figure 5.2 with the demand at D increased to 50 L s⁻¹ (the inflow at A rises to 120 L s⁻¹). Which pipe changes its flow direction, if any?
 5. For the siphon of Example 5.4, find the highest crest if the pipe is 0.15 m in diameter. Explain why a smaller siphon can have a higher crest.
-6. A 2 km steel pipeline ($D$ = 0.6 m, wall 8 mm) carries water at 1.8 m s⁻¹. A valve at the downstream end closes in 2 s. Is this a rapid closure? Estimate the maximum pressure rise in kPa and in metres of water.
+6. A 2 km steel pipeline ($D$ = 0.6 m, wall 8 mm) carries water at 1.8 m s⁻¹. A valve at the downstream end closes in 2 s. Is this a rapid closure? Estimate the maximum pressure rise in kPa and in meters of water.
 
 ---
 

@@ -208,7 +208,7 @@ In hydraulics the forces that can act on a fluid element are inertia, pressure, 
   - Losses, pressure coefficients, cavitation
 ```
 
-A related group is the **cavitation number** $(p - p_v)/(\rho V^2/2)$, which compares the margin above vapour pressure (Chapter 1) with the dynamic pressure. In the Euler number the pressure is usually the dependent variable: once the other numbers are fixed, $Eu$ follows. This is why a loss coefficient or a drag coefficient measured in a model can be used directly in the prototype.
+A related group is the **cavitation number** $(p - p_v)/(\rho V^2/2)$, which compares the margin above vapor pressure (Chapter 1) with the dynamic pressure. In the Euler number the pressure is usually the dependent variable: once the other numbers are fixed, $Eu$ follows. This is why a loss coefficient or a drag coefficient measured in a model can be used directly in the prototype.
 
 ## 9.5 Similitude
 
@@ -218,7 +218,7 @@ A model gives reliable results only if it is **similar** to the prototype. Three
 - **Kinematic similarity.** The velocities at corresponding points have the same direction and a fixed ratio $V_r = V_p/V_m$. The streamline patterns are then geometrically similar.
 - **Dynamic similarity.** The forces at corresponding points have a fixed ratio, so the force polygons are similar. This requires every relevant dimensionless force ratio to have the same value in model and prototype.
 
-Dynamic similarity is the condition that matters, because it guarantees the other two in a geometrically similar model. In practice it is impossible to make all force ratios equal at once, so the modeller identifies the **dominant forces** and scales those correctly.
+Dynamic similarity is the condition that matters, because it guarantees the other two in a geometrically similar model. In practice it is impossible to make all force ratios equal at once, so the modeler identifies the **dominant forces** and scales those correctly.
 
 ## 9.6 Model laws
 
@@ -293,7 +293,7 @@ For a 1:10 model, the model fluid would need a kinematic viscosity 32 times smal
 
 ## 9.7 Scale effects
 
-**Scale effects** are the differences between model and prototype behaviour caused by forces that are not scaled correctly. In a Froude model with water, gravity and inertia are correct, but viscosity and surface tension are relatively too strong. The smaller the model, the larger the error.
+**Scale effects** are the differences between model and prototype behavior caused by forces that are not scaled correctly. In a Froude model with water, gravity and inertia are correct, but viscosity and surface tension are relatively too strong. The smaller the model, the larger the error.
 
 **Viscosity.** In the prototype the flow is almost always fully turbulent and rough, so the friction factor and loss coefficients no longer depend on $Re$ (Chapter 5). If the model is large enough that its flow is also turbulent and rough, the coefficients are the same and the scale effect is small. If the model Reynolds number is too low, friction is relatively too high, losses are overestimated and jets and hydraulic jumps lose energy differently. Common guidelines ask for a model Reynolds number, based on depth, of at least about $10^4$, and higher (up to about $10^5$) when air entrainment or energy dissipation is studied. Figure 9.3 shows how quickly $Re_m$ falls as the scale becomes smaller.
 
@@ -322,7 +322,7 @@ plt.tight_layout(); plt.show()
 
 ## 9.8 Distorted models
 
-Rivers, estuaries and harbours are very wide compared with their depth. A river reach 10 km long and 200 m wide, but only 4 m deep, would be 4 cm deep at a scale of 1:100, too shallow for turbulent flow and accurate measurement. A long reach would also not fit in the laboratory at a larger scale. The solution is a **distorted model**, with a horizontal scale $X_r$ larger than the vertical scale $Y_r$. The ratio $X_r/Y_r$ is the **distortion**, typically 2–10.
+Rivers, estuaries and harbors are very wide compared with their depth. A river reach 10 km long and 200 m wide, but only 4 m deep, would be 4 cm deep at a scale of 1:100, too shallow for turbulent flow and accurate measurement. A long reach would also not fit in the laboratory at a larger scale. The solution is a **distorted model**, with a horizontal scale $X_r$ larger than the vertical scale $Y_r$. The ratio $X_r/Y_r$ is the **distortion**, typically 2–10.
 
 Gravity waves and the Froude number depend on depth, so the Froude law is applied with the vertical scale:
 
@@ -340,9 +340,9 @@ $$
 n_r = \frac{Y_r^{2/3}}{X_r^{1/2}}.
 $$
 
-This ratio is often less than 1, so the model must be **rougher** than the prototype. Modellers add roughness with gravel, wire mesh or small blocks, and then **calibrate** the model: they adjust the roughness until the model reproduces water levels measured in the field. Distorted models reproduce water levels and discharges well, but not local three-dimensional flows such as those around piers or in sharp bends, because the shapes of eddies are distorted.
+This ratio is often less than 1, so the model must be **rougher** than the prototype. Modelers add roughness with gravel, wire mesh or small blocks, and then **calibrate** the model: they adjust the roughness until the model reproduces water levels measured in the field. Distorted models reproduce water levels and discharges well, but not local three-dimensional flows such as those around piers or in sharp bends, because the shapes of eddies are distorted.
 
-## 9.9 Hydraulic modelling practice
+## 9.9 Hydraulic modeling practice
 
 Building a physical model is a balance between accuracy and cost. The main steps are:
 
@@ -351,7 +351,7 @@ Building a physical model is a balance between accuracy and cost. The main steps
 3. **Build and calibrate.** Construct the model with accurate geometry, then compare it with any available prototype data (water levels, rating curves) and adjust roughness if needed.
 4. **Test and interpret.** Run the design cases, convert the results to prototype values with the scale ratios, and judge which results may be affected by scale effects.
 
-**Numerical models.** Today many questions are answered with **numerical models** that solve the flow equations on a computer, from one-dimensional river models to three-dimensional turbulence models. They have no scale effects and can test many options quickly. However, they depend on assumptions about turbulence, roughness and air entrainment, and they must be validated against data. Physical and numerical models are best used together: the physical model checks the critical details, and the numerical model extends the results to more cases. This combined approach is called **hybrid modelling**.
+**Numerical models.** Today many questions are answered with **numerical models** that solve the flow equations on a computer, from one-dimensional river models to three-dimensional turbulence models. They have no scale effects and can test many options quickly. However, they depend on assumptions about turbulence, roughness and air entrainment, and they must be validated against data. Physical and numerical models are best used together: the physical model checks the critical details, and the numerical model extends the results to more cases. This combined approach is called **hybrid modeling**.
 
 ## 9.10 Worked examples
 
@@ -385,7 +385,7 @@ print(f"Model head = {Hm*100:.0f} cm, q_m = {qm:.4f} m^2/s, V_m = {Vm:.2f} m/s")
 print(f"Re_m = {Re_m:,.0f}, We_m = {We_m:.0f}")
 ```
 
-The model head is 10 cm, well above the 3 cm rule, and the Reynolds number is about 79 000, above the usual limit of $10^4$. Discharge and water levels should be reliable; air entrainment in the jump would still be underestimated.
+The model head is 10 cm, well above the 3 cm rule, and the Reynolds number is about 79,000, above the usual limit of $10^4$. Discharge and water levels should be reliable; air entrainment in the jump would still be underestimated.
 
 **Example 9.3 — Choosing the scale.** A stilling basin 30 m wide must pass 900 m³ s⁻¹. The laboratory flume is 1.0 m wide and the pump delivers at most 120 L s⁻¹. What is the largest possible model (smallest $L_r$)?
 
@@ -399,7 +399,7 @@ print(f"Choose L_r = 40: model Q = {900/40**2.5*1e3:.0f} L/s, model width = {30/
 
 The pump, not the flume width, controls the scale here: $L_r$ must be at least 35.5. A round scale of 1:40 needs 89 L s⁻¹, which leaves a margin of about 25% on the pump.
 
-**Example 9.4 — Distorted river model.** A river reach 10 km long, with mean width 200 m, depth 4.0 m, Manning $n = 0.030$ and flood discharge 800 m³ s⁻¹, is modelled with horizontal scale 1:250 and vertical scale 1:50. Find the model length, depth, discharge and required Manning $n$, the time scale, and the model Reynolds number $V_m h_m/\nu$.
+**Example 9.4 — Distorted river model.** A river reach 10 km long, with mean width 200 m, depth 4.0 m, Manning $n = 0.030$ and flood discharge 800 m³ s⁻¹, is modeled with horizontal scale 1:250 and vertical scale 1:50. Find the model length, depth, discharge and required Manning $n$, the time scale, and the model Reynolds number $V_m h_m/\nu$.
 
 ```{code-cell} python
 X, Y = 250.0, 50.0
@@ -417,7 +417,7 @@ print(f"Time scale = {t_r:.1f}: 1 h in prototype = {3600/t_r/60:.1f} min in mode
 print(f"Re_m = {Vm*hm/nu:,.0f}")
 ```
 
-The model is 40 m long and 8 cm deep and needs only about 9 L s⁻¹. Its Manning $n$ must be about 0.035, rougher than the prototype, so artificial roughness is needed. A one-hour flood in the river lasts under two minutes in the model, and the Reynolds number of about 11 000 is just acceptable.
+The model is 40 m long and 8 cm deep and needs only about 9 L s⁻¹. Its Manning $n$ must be about 0.035, rougher than the prototype, so artificial roughness is needed. A one-hour flood in the river lasts under two minutes in the model, and the Reynolds number of about 11,000 is just acceptable.
 
 ## 9.11 Common mistakes
 
@@ -433,7 +433,7 @@ The model is 40 m long and 8 cm deep and needs only about 9 L s⁻¹. Its Mannin
 1. The period $T$ of small waves on deep water depends on the wavelength $\lambda$, gravity $g$ and density $\rho$. Use Rayleigh's method to find the form of the relation. Why does $\rho$ drop out?
 2. The thrust $F$ of a ship's propeller depends on its diameter $D$, speed of rotation $N$, forward speed $V$, water density $\rho$ and viscosity $\mu$. Use the Buckingham $\Pi$ theorem with $\rho$, $N$ and $D$ as repeating variables to find the dimensionless groups.
 3. The discharge $Q$ through a small orifice depends on the head $H$, the orifice diameter $d$, gravity $g$, density $\rho$, viscosity $\mu$ and surface tension $\sigma$. Find a set of $\Pi$ groups and name the familiar numbers among them.
-4. A 1:25 model of a harbour is tested with waves of period 1.6 s and height 0.12 m. Find the prototype wave period and height. If the measured force on a model caisson is 85 N per metre length, what is the prototype force per metre length?
+4. A 1:25 model of a harbor is tested with waves of period 1.6 s and height 0.12 m. Find the prototype wave period and height. If the measured force on a model caisson is 85 N per meter length, what is the prototype force per meter length?
 5. Show that, for a Froude model with the same fluid, the Weber number scales as $L_r^{2}$ and the Reynolds number as $L_r^{3/2}$. For a prototype weir head of 1.5 m, what is the largest scale ratio $L_r$ (the smallest model) that keeps the model head above 3 cm?
 6. Design a distorted model of an estuary 30 km long and 2 km wide with mean depth 6 m, for a laboratory hall 60 m long. Choose the horizontal and vertical scales, and find the time scale for a tidal period of 12.4 h.
 

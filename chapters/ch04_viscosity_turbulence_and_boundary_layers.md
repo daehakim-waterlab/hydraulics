@@ -23,9 +23,9 @@ kernelspec:
 
 ## 4.1 Laminar and turbulent flow
 
-In 1883 Osborne Reynolds let water flow from a large tank through a horizontal glass tube and injected a thin filament of dye at the tube entrance. At low velocity the dye stayed as a straight, sharp line along the whole tube. At higher velocity the line began to wave, and above a certain velocity it broke up suddenly and coloured the whole tube within a short distance.
+In 1883 Osborne Reynolds let water flow from a large tank through a horizontal glass tube and injected a thin filament of dye at the tube entrance. At low velocity the dye stayed as a straight, sharp line along the whole tube. At higher velocity the line began to wave, and above a certain velocity it broke up suddenly and colored the whole tube within a short distance.
 
-Reynolds had found the two basic types of real flow. In **laminar flow** the fluid moves in smooth layers (*lamina* is Latin for a thin sheet), and neighbouring layers exchange momentum only through molecular viscosity. In **turbulent flow** the fluid moves in irregular eddies of many sizes, and the eddies carry momentum, heat and dye across the flow far faster than viscosity can.
+Reynolds had found the two basic types of real flow. In **laminar flow** the fluid moves in smooth layers (*lamina* is Latin for a thin sheet), and neighboring layers exchange momentum only through molecular viscosity. In **turbulent flow** the fluid moves in irregular eddies of many sizes, and the eddies carry momentum, heat and dye across the flow far faster than viscosity can.
 
 Reynolds showed that the change does not depend on velocity alone, but on the dimensionless group now called the **Reynolds number**:
 
@@ -96,7 +96,7 @@ $$
 \tau = \frac{\gamma S_f}{2}\, r .
 $$
 
-The shear stress is zero on the centreline and grows linearly to its wall value $\tau_0 = \gamma S_f r_0/2$. Writing $r_0/2 = D/4 = R$ gives the important result
+The shear stress is zero on the centerline and grows linearly to its wall value $\tau_0 = \gamma S_f r_0/2$. Writing $r_0/2 = D/4 = R$ gives the important result
 
 $$
 \tau_0 = \gamma R S_f ,
@@ -110,7 +110,7 @@ $$
 u(r) = \frac{\gamma S_f}{4\mu}\left(r_0^2 - r^2\right).
 $$
 
-The velocity profile is a **parabola**. The maximum velocity is on the centreline, and integrating $u$ over the cross-section shows that the mean velocity is exactly half of it, $V = u_{max}/2$. Solving for the head loss $h_f = S_f L$ over a length $L$ gives the **Hagen–Poiseuille equation**:
+The velocity profile is a **parabola**. The maximum velocity is on the centerline, and integrating $u$ over the cross-section shows that the mean velocity is exactly half of it, $V = u_{max}/2$. Solving for the head loss $h_f = S_f L$ over a length $L$ gives the **Hagen–Poiseuille equation**:
 
 $$
 h_f = \frac{32\, \mu L V}{\gamma D^2}.
@@ -132,7 +132,7 @@ $$
 
 where $\bar{u}$ is averaged over a time much longer than the eddy time scale, so the average of $u'$ is zero. In hydraulics "velocity" in a turbulent flow almost always means $\bar{u}$. The size of the fluctuations is measured by the **turbulence intensity**, the root-mean-square of $u'$ divided by $\bar{u}$; in pipes and rivers it is of the order of 10%.
 
-Eddies carry fast fluid towards the wall and slow fluid away from it. This exchange transfers momentum and acts like an extra shear stress, the **Reynolds stress** $-\rho\, \overline{u'v'}$, where $v'$ is the velocity fluctuation normal to the wall. Boussinesq proposed writing the total shear stress in the same form as Newton's law:
+Eddies carry fast fluid toward the wall and slow fluid away from it. This exchange transfers momentum and acts like an extra shear stress, the **Reynolds stress** $-\rho\, \overline{u'v'}$, where $v'$ is the velocity fluctuation normal to the wall. Boussinesq proposed writing the total shear stress in the same form as Newton's law:
 
 $$
 \tau = \rho \left(\nu + \nu_t\right) \frac{d\bar{u}}{dy},
@@ -167,7 +167,7 @@ tidy(ax); plt.tight_layout(); plt.show()
 
 ## 4.4 Boundary layers
 
-When a uniform stream of velocity $U$ meets a thin flat plate, the fluid touching the plate stops (no-slip). Viscosity spreads this slowing outwards, so a layer of retarded fluid grows along the plate. This layer is the **boundary layer**. Its **thickness** $\delta$ is usually defined as the distance from the wall where the velocity reaches $0.99U$. Outside the boundary layer the velocity gradients are small, so viscous stresses are negligible and the flow behaves almost as an ideal fluid (Chapter 3).
+When a uniform stream of velocity $U$ meets a thin flat plate, the fluid touching the plate stops (no-slip). Viscosity spreads this slowing outward, so a layer of retarded fluid grows along the plate. This layer is the **boundary layer**. Its **thickness** $\delta$ is usually defined as the distance from the wall where the velocity reaches $0.99U$. Outside the boundary layer the velocity gradients are small, so viscous stresses are negligible and the flow behaves almost as an ideal fluid (Chapter 3).
 
 Near the leading edge the boundary layer is laminar. Its thickness was found by Blasius (1908):
 
@@ -287,11 +287,11 @@ Viscosity has disappeared from this equation. This is why friction in fully roug
 
 ## 4.6 Flow separation
 
-Outside the boundary layer, the pressure along a body follows the Bernoulli equation. Where the outer flow speeds up, pressure falls in the flow direction (a **favourable pressure gradient**). Where it slows down, pressure rises (an **adverse pressure gradient**). The slow fluid near the wall has little momentum. In an adverse gradient it can be brought to rest and pushed backwards. The boundary layer then leaves the wall: this is **flow separation**. Behind the separation point lies a **wake** of slow, recirculating eddies.
+Outside the boundary layer, the pressure along a body follows the Bernoulli equation. Where the outer flow speeds up, pressure falls in the flow direction (a **favorable pressure gradient**). Where it slows down, pressure rises (an **adverse pressure gradient**). The slow fluid near the wall has little momentum. In an adverse gradient it can be brought to rest and pushed backward. The boundary layer then leaves the wall: this is **flow separation**. Behind the separation point lies a **wake** of slow, recirculating eddies.
 
 Separation occurs wherever the flow must slow down quickly: behind a bridge pier, at a sudden pipe expansion, on the inside of a sharp bend, downstream of a partly open valve and in a diffuser that widens too fast. The wake converts kinetic energy into turbulence and finally into heat. This is the origin of most **minor losses** in pipe fittings (Chapter 5). Separation zones also produce strong eddies at the bed, which cause local scour around piers and abutments.
 
-A turbulent boundary layer resists separation better than a laminar one, because eddies keep bringing fast fluid down to the wall. This explains the surprising drag behaviour of a sphere in Section 4.7.
+A turbulent boundary layer resists separation better than a laminar one, because eddies keep bringing fast fluid down to the wall. This explains the surprising drag behavior of a sphere in Section 4.7.
 
 ## 4.7 Drag and lift on immersed bodies
 
@@ -370,7 +370,7 @@ print(f"V = {V:.3f} m/s, Re = {Re:,.0f}  -> turbulent")
 print(f"Largest laminar discharge ≈ {Q_lam*1e3:.3f} L/s")
 ```
 
-The flow is turbulent with $Re$ ≈ 10,000. It would be laminar only below about 0.04 L s⁻¹, a thin dribble from a tap. Water pipes in buildings are almost always turbulent.
+The flow is turbulent with $Re$ ≈ 10,000. It would be laminar only below about 0.04 L s⁻¹, a thin dribble from a faucet. Water pipes in buildings are almost always turbulent.
 
 **Example 4.2 — Head loss in a small tube.** Water at 20 °C flows at a mean velocity of 0.5 m s⁻¹ through a horizontal tube with a diameter of 2 mm and a length of 1 m. Find the head loss and the friction factor.
 

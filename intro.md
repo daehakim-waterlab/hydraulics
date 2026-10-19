@@ -11,6 +11,6 @@ The whole book is also available as a [PDF](https://daehakim-waterlab.github.io/
 ```{tableofcontents}
 ```
 
-## Licence
+## License
 
 This book is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/). You may share and adapt it for non-commercial purposes with appropriate credit.

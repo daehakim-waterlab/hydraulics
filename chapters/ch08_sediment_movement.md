@@ -22,7 +22,7 @@ kernelspec:
 
 ## 8.1 Why sediment matters
 
-Rivers carry not only water but also sand, gravel, silt and clay. A large river can move millions of tonnes of sediment each year. Where the flow slows down, for example in a reservoir or at a river mouth, the sediment settles. Where the flow speeds up, for example around a bridge pier or below a dam, the flow picks up sediment and the bed is lowered.
+Rivers carry not only water but also sand, gravel, silt and clay. A large river can move millions of metric tons of sediment each year. Where the flow slows down, for example in a reservoir or at a river mouth, the sediment settles. Where the flow speeds up, for example around a bridge pier or below a dam, the flow picks up sediment and the bed is lowered.
 
 These processes create some of the most expensive problems in water engineering:
 
@@ -43,7 +43,7 @@ Sediment transport is a two-phase problem: water and solid grains interact. A co
 
 * - Class
   - Diameter $D$ (mm)
-  - Typical behaviour in rivers
+  - Typical behavior in rivers
 * - Clay
   - below 0.004
   - Cohesive; stays in suspension for days
@@ -64,7 +64,7 @@ Sediment transport is a two-phase problem: water and solid grains interact. A co
   - Rarely moves; acts as roughness
 ```
 
-Natural sediments contain a range of sizes. The **grain-size distribution** is a plot of the percentage by mass finer than each size. It is summarised by percentiles: $D_{50}$ is the **median size** (50% of the mass is finer), and $D_{84}$ and $D_{16}$ describe the coarse and fine parts. The ratio $\sigma_g = \sqrt{D_{84}/D_{16}}$ is the **geometric standard deviation**; a sediment with $\sigma_g < 1.3$ is called well sorted (nearly uniform). In this chapter $D$ means $D_{50}$ unless stated.
+Natural sediments contain a range of sizes. The **grain-size distribution** is a plot of the percentage by mass finer than each size. It is summarized by percentiles: $D_{50}$ is the **median size** (50% of the mass is finer), and $D_{84}$ and $D_{16}$ describe the coarse and fine parts. The ratio $\sigma_g = \sqrt{D_{84}/D_{16}}$ is the **geometric standard deviation**; a sediment with $\sigma_g < 1.3$ is called well sorted (nearly uniform). In this chapter $D$ means $D_{50}$ unless stated.
 
 **Density.** Most natural sand and gravel is quartz or feldspar, with **density** $\rho_s \approx 2650$ kg m⁻³. The **relative density** of the grains is
 
@@ -180,7 +180,7 @@ $$
 D_* = D \left[ \frac{(s-1)\, g}{\nu^2} \right]^{1/3}.
 $$
 
-$D_*$ depends only on the grain and the fluid, not on the flow, so it can be calculated before we know $\tau_0$. For quartz in water at 20 °C, $D_* \approx 25$ per millimetre of grain diameter. The relation between $\theta_{cr}$ and $D_*$ is the **Shields curve**. A convenient explicit fit is that of **Soulsby and Whitehouse (1997)**:
+$D_*$ depends only on the grain and the fluid, not on the flow, so it can be calculated before we know $\tau_0$. For quartz in water at 20 °C, $D_* \approx 25$ per millimeter of grain diameter. The relation between $\theta_{cr}$ and $D_*$ is the **Shields curve**. A convenient explicit fit is that of **Soulsby and Whitehouse (1997)**:
 
 $$
 \theta_{cr} = \frac{0.30}{1 + 1.2 D_*} + 0.055 \left[ 1 - e^{-0.020 D_*} \right].
@@ -232,11 +232,11 @@ Markdown("| $D$ (mm) | $w_s$ (mm s⁻¹) | $D_*$ | $\\theta_{cr}$ | $\\tau_{cr}$
 
 ## 8.5 Bed forms
 
-When sand starts to move, the bed rarely stays flat. It organises itself into regular waves called **bed forms**. Bed forms matter because they change the flow resistance of the channel (the Manning $n$ of a sand-bed river can double when dunes form) and because they control how sediment moves.
+When sand starts to move, the bed rarely stays flat. It organizes itself into regular waves called **bed forms**. Bed forms matter because they change the flow resistance of the channel (the Manning $n$ of a sand-bed river can double when dunes form) and because they control how sediment moves.
 
 As the flow becomes stronger, a sand bed passes through a sequence of forms, which is linked to the Froude number $Fr = V/\sqrt{g h}$ (Chapter 6):
 
-- **Ripples.** Small, triangular forms a few centimetres high and less than about 0.6 m long. They form only in fine and medium sand ($D$ less than about 0.6 mm) at low shear stress. Their size depends on the grain size, not on the depth.
+- **Ripples.** Small, triangular forms a few centimeters high and less than about 0.6 m long. They form only in fine and medium sand ($D$ less than about 0.6 mm) at low shear stress. Their size depends on the grain size, not on the depth.
 - **Dunes.** Larger triangular forms with a gentle upstream face and a steep downstream face, with flow separation behind the crest. Dune height scales with flow depth (often 10–30% of $h$). Both ripples and dunes move slowly downstream. They belong to the **lower regime**, with $Fr$ well below 1.
 - **Plane bed.** At higher velocity the dunes are washed out and the bed becomes flat again, with intense transport. Resistance drops sharply. This is the **upper regime**.
 - **Antidunes.** When $Fr$ approaches or exceeds 1, the bed forms waves that are in phase with surface waves. They can move upstream, and they often break.
@@ -398,7 +398,7 @@ print(f"At h = {h} m: tau0 = {tau0:.1f} Pa, theta = {theta:.3f}, theta/theta_cr 
 
 The bed starts to move when the depth exceeds about 1.4 m. At 2.0 m the Shields parameter is about 1.5 times the critical value, so the bed is mobile but not far above the threshold, which is typical of gravel rivers in flood.
 
-**Example 8.3 — Bed load during the flood.** For the river in Example 8.2, at $h = 2.0$ m, estimate the bed-load transport rate with the Meyer-Peter and Müller formula. The active channel is 40 m wide. Give the result in kg s⁻¹ and in tonnes per day.
+**Example 8.3 — Bed load during the flood.** For the river in Example 8.2, at $h = 2.0$ m, estimate the bed-load transport rate with the Meyer-Peter and Müller formula. The active channel is 40 m wide. Give the result in kg s⁻¹ and in metric tons per day.
 
 ```{code-cell} python
 B = 40.0
@@ -406,12 +406,12 @@ Phi = 8 * max(theta - 0.047, 0) ** 1.5
 qb = Phi * np.sqrt((s - 1) * g * D**3)          # m^2/s, volume of grains
 Gs = qb * rho_s * B                              # kg/s
 print(f"Phi = {Phi:.4f}, q_b = {qb*1e3:.2f} x 10^-3 m^2/s")
-print(f"Bed load = {Gs:.0f} kg/s  =  {Gs*86400/1e3:,.0f} t/day")
+print(f"Bed load = {Gs:.0f} kg/s  =  {Gs*86400/1e3:,.0f} metric tons/day")
 ```
 
-About 110 kg of gravel passes every second, or about 9400 tonnes per day. If the flood lasted three days at this level, the deposit volume would be about $3 \times 9400 / (2.65 \times 0.65) \approx 16\,000$ m³ (using a porosity of 0.35). The Wong and Parker version of the formula would give about half this amount.
+About 110 kg of gravel passes every second, or about 9,400 metric tons per day. If the flood lasted three days at this level, the deposit volume would be about $3 \times 9400 / (2.65 \times 0.65) \approx 16{,}000$ m³ (using a porosity of 0.35). The Wong and Parker version of the formula would give about half this amount.
 
-**Example 8.4 — Total load in a sand-bed river.** A wide sand-bed river with $D = 0.3$ mm flows 3.0 m deep on a slope of 0.0002 with mean velocity 1.2 m s⁻¹. Estimate the total load per metre width with the Engelund–Hansen formula, and the mean sediment concentration in mg L⁻¹.
+**Example 8.4 — Total load in a sand-bed river.** A wide sand-bed river with $D = 0.3$ mm flows 3.0 m deep on a slope of 0.0002 with mean velocity 1.2 m s⁻¹. Estimate the total load per meter width with the Engelund–Hansen formula, and the mean sediment concentration in mg L⁻¹.
 
 ```{code-cell} python
 D, h, S, V = 0.3e-3, 3.0, 0.0002, 1.2
@@ -420,11 +420,11 @@ theta = tau0 / ((rho_s - rho) * g * D)
 qt = 0.05 * V**2 * theta**1.5 * np.sqrt(D / ((s - 1) * g))
 C = rho_s * qt / (V * h) * 1e3                  # kg/m^3 -> mg/L
 print(f"tau0 = {tau0:.2f} Pa, theta = {theta:.2f} (theta_cr = {theta_cr(Dstar(D)):.3f})")
-print(f"q_t = {qt*1e3:.3f} x 10^-3 m^2/s = {qt*rho_s:.2f} kg/s per metre width")
+print(f"q_t = {qt*1e3:.3f} x 10^-3 m^2/s = {qt*rho_s:.2f} kg/s per meter width")
 print(f"Mean concentration = {C:.0f} mg/L")
 ```
 
-The Shields parameter is more than 30 times the critical value, so the bed is fully mobile and the formula applies. Each metre of the river carries about 1.1 kg of sand per second, at a mean concentration of about 300 mg L⁻¹.
+The Shields parameter is more than 30 times the critical value, so the bed is fully mobile and the formula applies. Each meter of the river carries about 1.1 kg of sand per second, at a mean concentration of about 300 mg L⁻¹.
 
 **Example 8.5 — How is the sand carried?** In the river of Example 8.4, find the Rouse number of the 0.3 mm sand. With $a = 0.05h$, what is the concentration at mid-depth relative to $c_a$?
 
@@ -471,7 +471,7 @@ The bank stones need to be about as large as the bed stones even though the shea
 3. A wide channel lined with gravel of $D = 12$ mm carries water 0.8 m deep. What is the steepest slope at which the bed remains stable?
 4. Using the Meyer-Peter and Müller formula, show that the bed-load rate per unit width $q_b$ for $\theta \gg 0.047$ is proportional to $\tau_0^{3/2}$, independent of grain size. Explain why this is physically reasonable.
 5. A river carries 0.1 mm sand with shear velocity 0.05 m s⁻¹. Calculate the Rouse number and plot the concentration profile $c/c_a$ for $a = 0.05h$. At what height is $c/c_a = 0.5$?
-6. A reservoir has a storage volume of 50 × 10⁶ m³ and traps 400 000 t of sediment per year. With a deposit porosity of 0.4 and $\rho_s = 2650$ kg m⁻³, how many years does it take to lose half its storage?
+6. A reservoir has a storage volume of 50 × 10⁶ m³ and traps 400,000 metric tons of sediment per year. With a deposit porosity of 0.4 and $\rho_s = 2650$ kg m⁻³, how many years does it take to lose half its storage?
 
 ---
 
