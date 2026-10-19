@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-# 8. Sediment transport
+# 8. Sediment Movement
 
 ```{admonition} Core ideas
 :class: tip

@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-# 9. Dimensional analysis and the theory of physical models
+# 9. Similitude and Hydraulic Models
 
 ```{admonition} Core ideas
 :class: tip

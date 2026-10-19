@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-# 3. Principles of fluid flow
+# 3. Conservation Laws of Flow
 
 ```{admonition} Core ideas
 :class: tip

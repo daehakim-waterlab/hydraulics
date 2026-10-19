@@ -5,12 +5,12 @@ root: intro
 parts:
   - caption: Chapters
     chapters:
-      - file: chapters/ch01_fluids_and_properties
-      - file: chapters/ch02_hydrostatics
-      - file: chapters/ch03_principles_of_fluid_flow
-      - file: chapters/ch04_behaviour_of_real_fluids
-      - file: chapters/ch05_flow_in_pipes_and_closed_conduits
-      - file: chapters/ch06_open_channel_flow
-      - file: chapters/ch07_wave_theory
-      - file: chapters/ch08_sediment_transport
-      - file: chapters/ch09_dimensional_analysis_and_physical_models
+      - file: chapters/ch01_water_and_its_properties
+      - file: chapters/ch02_water_at_rest
+      - file: chapters/ch03_conservation_laws_of_flow
+      - file: chapters/ch04_viscosity_turbulence_and_boundary_layers
+      - file: chapters/ch05_pipe_flow_and_pipe_systems
+      - file: chapters/ch06_flow_in_open_channels
+      - file: chapters/ch07_water_waves
+      - file: chapters/ch08_sediment_movement
+      - file: chapters/ch09_similitude_and_hydraulic_models

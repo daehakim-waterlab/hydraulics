@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-# 7. Wave theory
+# 7. Water Waves
 
 ```{admonition} Core ideas
 :class: tip

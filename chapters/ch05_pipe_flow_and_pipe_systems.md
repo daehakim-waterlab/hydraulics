@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-# 5. Flow in pipes and closed conduits
+# 5. Pipe Flow and Pipe Systems
 
 ```{admonition} Core ideas
 :class: tip

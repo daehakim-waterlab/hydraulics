@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-# 2. Hydrostatics
+# 2. Water at Rest
 
 ```{admonition} Core ideas
 :class: tip

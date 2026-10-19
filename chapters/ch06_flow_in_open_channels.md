@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-# 6. Open channel flow
+# 6. Flow in Open Channels
 
 ```{admonition} Core ideas
 :class: tip

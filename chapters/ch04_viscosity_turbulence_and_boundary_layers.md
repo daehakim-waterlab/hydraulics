@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-# 4. Behaviour of real fluids
+# 4. Viscosity, Turbulence and Boundary Layers
 
 ```{admonition} Core ideas
 :class: tip

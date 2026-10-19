@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-# 1. Fluids and Their Properties
+# 1. Water and Its Properties
 
 ```{admonition} Core ideas
 :class: tip
