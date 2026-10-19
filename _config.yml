@@ -27,7 +27,7 @@ repository:
   branch: main
 
 html:
-  baseurl: https://daehakim-waterlab.github.io/hydraulics/
+  baseurl: https://hydroclimatol.com/hydraulics/
   use_repository_button: true
   use_issues_button: false
   use_edit_page_button: false
@@ -67,6 +67,6 @@ sphinx:
       footer_content_items: [extra-footer.html, last-updated.html]
       icon_links:
         - name: Download the book as PDF
-          url: https://daehakim-waterlab.github.io/hydraulics/hydraulics.pdf
+          url: https://hydroclimatol.com/hydraulics/hydraulics.pdf
           icon: fa-solid fa-file-pdf
           type: fontawesome

@@ -2,7 +2,7 @@
 
 An online textbook for the undergraduate Hydraulics course, Department of Civil Engineering, Jeonbuk National University.
 
-**Read it at <https://daehakim-waterlab.github.io/hydraulics/>** · [PDF](https://daehakim-waterlab.github.io/hydraulics/hydraulics.pdf)
+**Read it at <https://hydroclimatol.com/hydraulics/>** · [PDF](https://hydroclimatol.com/hydraulics/hydraulics.pdf)
 
 Built with [Jupyter Book](https://jupyterbook.org/) 1.x.
 
