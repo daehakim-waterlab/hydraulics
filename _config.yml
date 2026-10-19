@@ -66,7 +66,7 @@ sphinx:
     templates_path: [_templates]
     html_theme_options:
       footer_content_items: [extra-footer.html, last-updated.html]
-      # "Lab homepage" link at the right of the top bar (_templates/lab-home.html)
+      # "Lab homepage" link in the header, next to the buttons (as in the water-history book).
       article_header_end: [lab-home.html, article-header-buttons.html]
       icon_links:
         - name: Download the book as PDF
